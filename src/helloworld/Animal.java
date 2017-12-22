@@ -1,22 +1,31 @@
 package helloworld;
+interface Toys
+{
+	void getColor();
+	void makesound();
+} 
 
-abstract class Animal 
+class cat implements Toys
 {
-	abstract void makesound();
-}
-class dog extends Animal
-{
-	void makesound()
+	public void getColor()
 	{
-		System.out.println("woof woof");
+		System.out.println("My color is black");
 	}
 
-
+	@Override
+	public void makesound() {
+		// TODO Auto-generated method stub
+		System.out.println("Woof woof");
+	}
+	
 	public static void main(String[] args)
 	{
 		// TODO Auto-generated method stub
-		dog obj= new dog();
+		cat obj= new cat();
+		obj.getColor();
 		obj.makesound();
 	}
+
+
 
 }
